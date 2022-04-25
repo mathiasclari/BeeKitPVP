@@ -1,0 +1,7 @@
+name: BeeKitPVP
+version: '${project.version}'
+main: net.acticraft.plugins.beekitpvp.BeeKitPVP
+api-version: 1.18
+authors: [ PxLib ]
+commands:
+  axekit:

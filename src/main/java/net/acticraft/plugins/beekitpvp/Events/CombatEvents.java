@@ -24,7 +24,7 @@ public class CombatEvents implements Listener {
         if (e.getEntity() instanceof Player) {
             if (e.getEntity().getKiller() instanceof Player) {
                 e.getEntity().getKiller().getInventory().addItem(heal);
-
+                e.getDrops().clear();
             }
         }
     }

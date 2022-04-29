@@ -46,7 +46,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
             chestplate.setItemMeta(chestplateMeta);
 
             ItemMeta bootsMeta = boots.getItemMeta();
-            bootsMeta.setDisplayName(ChatColor.AQUA + "Leather Boots");
+            bootsMeta.setDisplayName(ChatColor.RED + "Leather Boots");
             boots.setItemMeta(bootsMeta);
 
             p.getInventory().addItem(axe);

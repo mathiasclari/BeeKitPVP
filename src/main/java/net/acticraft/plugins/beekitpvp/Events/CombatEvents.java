@@ -11,7 +11,9 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.scheduler.BukkitScheduler;
 
 import java.util.UUID;
 
@@ -24,7 +26,6 @@ public class CombatEvents implements Listener {
         if (e.getEntity() instanceof Player) {
             if (e.getEntity().getKiller() instanceof Player) {
                 e.getEntity().getKiller().getInventory().addItem(heal);
-                e.getDrops().clear();
             }
         }
     }
@@ -39,5 +40,11 @@ public class CombatEvents implements Listener {
         }
             p.teleport(p.getWorld().getSpawnLocation());
         }
+    }
+
+    @EventHandler
+    public void Respawn(PlayerRespawnEvent e) {
+        Player p = e.getPlayer();
+        p.getInventory().clear();
     }
 }
